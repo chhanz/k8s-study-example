@@ -1,0 +1,17 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2019-04-03T08:52:16Z"
+  name: v1beta1.metrics.k8s.io
+  resourceVersion: "1467138"
+  selfLink: /apis/apiregistration.k8s.io/v1/apiservices/v1beta1.metrics.k8s.io
+  uid: c8153b0c-55ed-11e9-a751-001a4a160172
+spec:
+  group: metrics.k8s.io
+  groupPriorityMinimum: 100
+  insecureSkipTLSVerify: true
+  service:
+    name: prometheus-kube-state-metrics
+    namespace: kube-system
+  version: v1beta1
+  versionPriority: 100
