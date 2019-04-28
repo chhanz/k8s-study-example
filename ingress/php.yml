@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: php-ingress
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: php.han.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: php-apache
+          servicePort: 80

@@ -1,11 +1,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: rbd-pvc
+  name: nginx-vol-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
-  storageClassName: rbd
+    - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 3Gi
